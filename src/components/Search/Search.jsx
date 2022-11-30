@@ -54,19 +54,13 @@ export default function Search(){
     }
     dispatch(fetchMovie(param))
     setParam("")
-    console.log(param)
   }
-  const changeInput = (e) =>{
-    // setParam(term)
-    // console.log(setParam(term))
-    console.log(e.target.value)
-    // console.log( setParam(e.target.value))
-  }
+ 
     return(
       <form  onSubmit={submitHandler}>
         <SearchBar>
             <SearchIconWrapper>
-                
+            <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
                 placeholder="Search…"
@@ -74,15 +68,7 @@ export default function Search(){
                 inputProps={{ 'aria-label': 'search' }}
                 onChange={(e)=> setParam(e.target.value)}
             />
-            {/* <input
-               type="text"
-               value={param}
-               onChange={()=> changeInput(e)}
-               
-               placeholder="Search Movies or Shows"
-               
-            /> */}
-            <Button variant="contained"><SearchIcon /></Button>
+            {/* <Button variant="contained"><SearchIcon /></Button> */}
         </SearchBar>
       </form>
     )
