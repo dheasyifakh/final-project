@@ -8,8 +8,6 @@ export const fetchMovie = createAsyncThunk(
             `?apikey=65525897&s=${params}`
         );
         return response.data
-        // const response = await fetch(fetchURL)
-        // return await response.json()
     }
 )
 
